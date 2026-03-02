@@ -1,0 +1,418 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1rem;
+}
+:root {
+  --primary-color: #213141;
+  --green1: #3b8b66;
+  --green2: #347356;
+  --green3: #61bf81;
+  --accent-color: #92d94c;
+}
+body{
+  background-color: rgb(255, 255, 240);
+}
+/* ------------------------------------------------------------Nav--------------------- */
+nav {
+  height: 15vh;
+  padding: 0 3rem;
+  background-color: var(--primary-color);
+  color: white;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav li {
+  display: inline-block;
+  margin: 0 1vw;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+nav a::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--accent-color);
+  transition: all 0.2s ease-in-out;
+}
+nav a:hover::before {
+  width: 100%;
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: bolder;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx      NAV     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+/* ----------------------------------------------------------HERO -------------------------------------------------*/
+.hero {
+  height: 85vh;
+  background-image: url(/img/Western-Uganda-tourist-attractions.webp);
+  background-size: cover;
+  object-fit: cover;
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 3rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-attachment: fixed;
+}
+.hero h1 {
+  line-height: 0.8;
+}
+.ug {
+  font-style: italic;
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx          HERO               xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+/* Preface */
+.preface {
+  padding: 5rem;
+  /* max-width: 75ch; */
+  text-align: center;
+  color: var(--primary-color);
+}
+.highlight {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+.preface p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+/* Preface */
+
+/* -------------------------------------------------------CAROUSEL------------------------------------------------ */
+.carousel {
+  height: 80vh;
+  background-color: aqua;
+  /* margin: 2vw; */
+  position: relative;
+}
+.carousel-track-container {
+  height: 100%;
+}
+.carousel-track {
+  list-style: none;
+  position: relative;
+}
+.carousel-slide {
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-btn {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.carousel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.116);
+}
+.carousel-btn-left {
+  left: 15px;
+  z-index: 1;
+}
+.carousel-btn-right {
+  right: 15px;
+  z-index: 1;
+}
+.carousel-btn img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+.carousel-nav {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.062);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  height: 1.5rem;
+  width: 20%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-indicator {
+  border: none;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.473);
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 5px 10px;
+}
+.carousel-indicator.current-slide {
+  background-color: rgba(255, 255, 255, 0.973);
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxCAROUSELxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+/* ----------------------------------------------------Attractions---------------------------------------------------- */
+.attractions {
+  padding: 0 3rem;
+}
+.attractions-head {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin: 3rem;
+}
+.item {
+}
+.item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  margin-bottom: -3rem;
+}
+.item-desc {
+  color: var(--primary-color);
+  padding: 5rem 5rem 2rem 5rem;
+}
+.item-desc h2 {
+  text-align: center;
+  font-weight: bolder;
+  text-decoration: underline;
+  margin-bottom: 0.5rem;
+}
+.destinations {
+  padding: 0 5rem;
+  margin-bottom: 5rem;
+}
+.card-container{
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.card{
+  margin-top: 2rem;
+  width: 25vw;
+  height: 400px;
+  display: flex;
+  flex-direction: column;  
+  justify-content: space-between;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.233);
+  transition: all .2s ease;
+  border-radius: 10px;
+}
+.card:hover{
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.562);
+  transform: translateY(-5px);
+  transform: scale(1.01);
+}
+.card img{
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card .d{
+ color: var(--green2);
+ /* transform: translateY(-55px); */
+ padding: .5rem 1rem;
+ font-size: .9rem;
+ text-align: center;
+ padding-bottom: 1rem;
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  Attractions  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/*  ----------------------------------------------------- summary -----------------------------------------------------  */
+.summary{
+  text-align: center;
+  margin: 5rem 0;
+  font-family: cursive;
+  color: #3f4c58;
+}
+.book-btn{
+  margin-top: 1.5rem;
+  padding: .7rem 1rem;
+  width: 15vw;
+  border-radius: 25px;
+  border: 1px solid var(--primary-color);
+  background-color: transparent;
+  transition:all .2s ease-in-out;
+}
+.book-btn:hover{
+  transform: translateY(2px);
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: white;
+  transition:all .2s ease-in-out;
+  
+}
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx summary xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+/* footer */
+.footer{
+  background-color: #C1BAA7;
+  /* padding: 2rem; */
+  /* padding-top: 3rem; */
+  display: grid;
+  grid-template: 3fr 1fr / 2fr 1fr;
+}
+.link{
+  list-style: none;
+}
+.link a{
+  color: var(--primary-color);
+  text-decoration: none;
+}
+.link h3{
+  font-size: 1.4rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: #3a434d;
+}
+.links{
+  width: 100%;
+  display: flex;
+  margin-right: 1rem;
+  position: relative;
+  justify-content: space-around;
+  padding: 0 2rem;
+}
+.links > div{
+  width: 30%;
+  padding: 1rem;
+}
+.links h3{
+  margin-bottom: 1rem;
+}
+.links p{
+  margin-bottom: .5rem;
+}
+.links a:hover{
+  text-decoration: underline;
+  color: #213141;
+}
+.awards{
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+
+}
+.awards img{
+  width: 150px;
+}
+.side{
+  background-color: #e6ddc7;
+  grid-column: 2  / 3;
+  padding: 0 2rem;
+}
+.side h2{
+  font-size: 2rem;
+  font-family: cursive;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+.side p{
+  font-size: 1.5rem;
+}
+.side button{
+  margin-bottom: 1rem;
+}
+
+.socials img{
+  width: 25px;
+}
+
+.foot{
+  background-color: var(--primary-color);
+  color: white;
+  grid-column: 1 / 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+  height: 15vh;
+}
+.foot ul{
+  display: flex;
+  list-style: none;
+
+}
+.foot a{
+  color: white;
+  margin: 0 .5rem;
+}
+.b-cert{
+  margin-left: 5rem;
+}
+/* footer */
