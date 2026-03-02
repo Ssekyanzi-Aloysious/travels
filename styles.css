@@ -94,7 +94,7 @@ nav a:hover::before {
 /* ----------------------------------------------------------HERO -------------------------------------------------*/
 .hero {
   height: 85vh;
-  background-image: url('../img/Western-Uganda-tourist-attractions.webp');
+  background-image: url("../img/Western-Uganda-tourist-attractions.webp");
   background-size: cover;
   object-fit: cover;
   font-size: 3rem;
